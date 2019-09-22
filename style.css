@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+    font-size: 25px;
+    color: #F2F2F2;
+}
+
+#main{
+    width: 100%;
+    height: 450px;
+    background-color: #2E2E2E;
+    text-align: center;
+}
+
+#main > h1 {  
+    line-height: 225px;
+    font-size: 5em;
+}
+
+#main > p {
+    padding: 10px;
+    margin-bottom: 2%;
+}
+
+#idUser {
+    color: #2E2E2E;
+    font-size: 1.5em;
+    width: 500px;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+}
+
+#main > button {
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#search {
+    width: 150px;
+    background: #04B404;
+    border: solid 2px #04B404;
+}
+
+#create {
+    width: 290px;
+    background: #045FB4;
+    border: solid 2px #045FB4;
+}
