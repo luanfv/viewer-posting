@@ -8,8 +8,6 @@ document.querySelector('#search').onclick = () => {
         url += `?userId=${document.querySelector('#idUser').value}`
     }
 
-    console.log(url)
-
     axios.get(url)
     .then((response) => {
         for(let i = 0; i < response.data.length; i++){
