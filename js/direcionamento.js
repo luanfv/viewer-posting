@@ -1,6 +1,8 @@
 document.querySelector('#create').onclick = () => {
     document.querySelector('#content').innerHTML = ''
     
+    document.querySelector('#content').style = 'width: 1200px; height: 620px; border: #A4A4A4 solid 1px; margin: 50px auto; align-content: center; text-align: center; background: white; border-radius: 5px;'
+
     const formElement = document.createElement('form')
     const inputTitleElement = document.createElement('input')
     const inputBodyElement = document.createElement('input')
@@ -22,8 +24,4 @@ document.querySelector('#create').onclick = () => {
     formElement.appendChild(publicElement)
 
     document.querySelector('#content').appendChild(formElement)
-}
-
-document.querySelector('#search').onclick = () => {
-    document.querySelector('#content').innerHTML = ''
 }
