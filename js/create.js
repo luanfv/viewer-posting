@@ -5,13 +5,13 @@ document.querySelector('#create').onclick = () => {
 
     const formElement = document.createElement('div')
     const inputTitleElement = document.createElement('input')
-    const inputBodyElement = document.createElement('input')
+    const inputBodyElement = document.createElement('textarea')
     const inputIdUserElement = document.createElement('input')
     const publicElement = document.createElement('button')
 
     inputTitleElement.setAttribute('placeholder', 'Informe o titulo da postagem')
     inputTitleElement.setAttribute('class', 'title')
-    inputIdUserElement.setAttribute('placeholder', 'Identificador')
+    inputIdUserElement.setAttribute('placeholder', 'ID')
     inputIdUserElement.setAttribute('class', 'idUser')
     inputBodyElement.setAttribute('placeholder', 'Informe o conteudo da postagem')
     inputBodyElement.setAttribute('class', 'body')

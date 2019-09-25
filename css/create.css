@@ -20,6 +20,12 @@
 .body {
     width: 1100px;
     height: 400px;
+    color: black;
+    padding: 5px;
+    border: #A4A4A4 2px solid;
+    border-radius: 5px;
+    margin-top: 20px;
+    resize: none;
 }
 
 .public {
