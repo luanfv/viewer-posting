@@ -18,6 +18,15 @@ document.querySelector('#create').onclick = () => {
     publicElement.appendChild(document.createTextNode("Publicar"))
     publicElement.setAttribute('class', 'public')
 
+    publicElement.onmouseover = () => {
+        publicElement.style.backgroundColor = 'black'
+        publicElement.style.cursor = 'pointer'
+    }
+
+    publicElement.onmouseout = () => {
+        publicElement.style.backgroundColor = '#2E2E2E'
+    }
+
     publicElement.onclick = () => {
         const postToCreate = getPostObject()
 
