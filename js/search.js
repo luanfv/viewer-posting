@@ -44,6 +44,10 @@ function render(response) {
         buttonElement.style.color = '#FA5858'
     }
 
+    buttonElement.onclick = () => {
+        deletePost(response.id)
+    }
+
     postElement.appendChild(idUserPostElement)
     postElement.appendChild(buttonElement)
     postElement.appendChild(titlePostElement)

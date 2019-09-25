@@ -7,3 +7,14 @@ function createPost(post) {
         alert('NÃO ROLOU')
     })
 }
+
+function deletePost(id){
+    axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    .then((response) => {
+        console.log(response)
+        alert(`Postagem do id: ${id}, foi removido com sucesso!`)
+    })
+    .catch(() => {
+        alert('NÃO ROLOU')
+    })
+}
