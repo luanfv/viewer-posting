@@ -10,6 +10,9 @@ document.querySelector('#search').onclick = () => {
 
     axios.get(url)
     .then((response) => {
+        if(response.data.length == 0)
+            alert('ID não encontrado!')
+
         for(let i = 0; i < response.data.length; i++){
             render(response.data[i])
         }
