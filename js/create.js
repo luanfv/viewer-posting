@@ -23,8 +23,10 @@ document.querySelector('#create').onclick = () => {
 
         if(Object.keys(postToCreate) == 0)
             alert('Postagem não foi criada. \n\nNem todos os campos foram preenchidos!')
-        else
-            alert(`${postToCreate.title} | ${postToCreate.body} | ${postToCreate.userId}`)
+        else {
+            createPost(postToCreate)
+            alert('Postagem criada com sucesso!')
+        }
     }
 
     function getPostObject() {
