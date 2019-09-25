@@ -21,16 +21,31 @@ document.querySelector('#search').onclick = () => {
 
 function render(response) {
     const postElement = document.createElement('div')
-    postElement.setAttribute('class', 'post')
     const titlePostElement = document.createElement('h2')
     const idUserPostElement = document.createElement('div')
     const bodyPostElement = document.createElement('p')
+    const buttonElement = document.createElement('button')
 
+    postElement.setAttribute('class', 'post')
+
+    buttonElement.appendChild(document.createTextNode('Excluir'))
     idUserPostElement.appendChild(document.createTextNode(`ID: ${response.userId}`))
     titlePostElement.appendChild(document.createTextNode(response.title))
     bodyPostElement.appendChild(document.createTextNode(response.body))
 
+    buttonElement.onmouseover = () => {
+        buttonElement.style.color = 'white'
+        buttonElement.style.background = '#FA5858'
+        buttonElement.style.cursor = 'pointer'
+    }
+
+    buttonElement.onmouseout = () => {
+        buttonElement.style.background = 'none'
+        buttonElement.style.color = '#FA5858'
+    }
+
     postElement.appendChild(idUserPostElement)
+    postElement.appendChild(buttonElement)
     postElement.appendChild(titlePostElement)
     postElement.appendChild(bodyPostElement)
 
