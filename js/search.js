@@ -25,7 +25,6 @@ function render(response) {
     const titlePostElement = document.createElement('h2')
     const idUserPostElement = document.createElement('div')
     const bodyPostElement = document.createElement('p')
-    const hr = document.createElement('hr')
 
     idUserPostElement.appendChild(document.createTextNode(`ID: ${response.userId}`))
     titlePostElement.appendChild(document.createTextNode(response.title))
