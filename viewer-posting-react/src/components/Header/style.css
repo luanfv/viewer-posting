@@ -1,0 +1,16 @@
+#header {
+    width: 100%;
+    height: 120px;
+    background-color: #424242;
+    color: #F2F2F2;
+}
+
+.title-header {
+    width: 30%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
