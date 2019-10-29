@@ -1,14 +1,35 @@
 import React, {Component} from 'react'
 import './style.css'
-import SubMenu from './SubMenu/index'
-import Postings from './pages/Postings'
+import Postings from './pages/Postings/index'
+import Search from './pages/Search/index'
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 
 export default class Main extends Component {
+    state = {
+        userId: 7,
+    }
+
     render() {
+        const {userId} = this.state
+
         return (
             <main id='main'>
-                <SubMenu />
-                <Postings />
+                <BrowserRouter>
+                    <div id='subMenu'>
+                        <h2>Busque uma postagem através do id de usuário de quem publicou</h2>
+                        <input id='search' className='search' placeholder='ID de usuário' value={userId} onChange={(e) => this.setState({userId: e.target.value})}></input>
+                        <Link to='/'>home</Link>
+                        <Link className='searchStart' to={`/posts/userId/${userId}`}>Pesquisar</Link>
+                        <hr />
+                        <h2>Crie uma nova postagem agora, apenas clique no botão abaixo e preencha o formulario</h2>
+                        <button className='createPosting'>Criar nova postagem</button>
+                    </div>
+                    
+                    <Switch>
+                        <Route exact path='/' component={Postings} />
+                        <Route exact path='/posts/userId/:userId' render={(props) => <Search {...props} condition={`?userId=${userId}`} />} />
+                    </Switch>
+                </BrowserRouter>
             </main>
         )
     }

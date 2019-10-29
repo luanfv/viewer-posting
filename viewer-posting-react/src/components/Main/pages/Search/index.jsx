@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import './style.css'
-import api from '../../../service/api'
-import imgDelete from '../../../img/delete.png'
+import api from '../../../../service/api'
+import imgDelete from '../../../../img/delete.png'
 
 export default class Postings extends Component {
     state = {
@@ -13,7 +13,7 @@ export default class Postings extends Component {
     }
 
     loadPostings = async () => {
-        const response = await api.get('/posts')
+        const response = await api.get(`/posts${this.props.condition}`)
         this.setState({postings: response.data})
     }
 
