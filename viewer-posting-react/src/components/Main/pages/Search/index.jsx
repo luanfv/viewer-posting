@@ -4,6 +4,10 @@ import api from '../../../../service/api'
 import imgDelete from '../../../../img/delete.png'
 
 export default class Postings extends Component {
+    constructor(props) {
+        super(props)
+    }
+    
     state = {
         postings: [],
     }
@@ -13,7 +17,7 @@ export default class Postings extends Component {
     }
 
     loadPostings = async () => {
-        const response = await api.get(`/posts${this.props.condition}`)
+        const response = await api.get(`/posts?userId=${this.props.match.params.userId}`)
         this.setState({postings: response.data})
     }
 
