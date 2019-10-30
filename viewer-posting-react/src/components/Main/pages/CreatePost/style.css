@@ -1,0 +1,62 @@
+.create-title, .create-userId, .create-body, .create-public {
+    margin: 0;
+    padding: 0;
+}
+
+#create-main {
+    width: 50%;
+    padding: 15px;
+    background-color: #F2F2F2;
+    color: #424242;
+    border: solid 1px #E6E6E6;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.create-hr {
+    margin: 30px 0px;
+}
+
+.create-title, .create-userId {
+    font-size: 1.2em;
+    padding: 2px;
+}
+
+.create-title {
+    width: 60%;
+    margin-right: 4%;
+}
+
+.create-userId {
+    width: 30%;
+}
+
+.create-body {
+    margin: 20px 0px;
+    resize: none;
+    width: 98%;
+    height: 200px;
+    padding: 5px;
+    font-size: 1.1em;
+}
+
+.create-public {
+    width: 98%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    margin-bottom: 40px;
+    padding: 10px;
+    
+    font-size: 1.5em;
+    background-color: #045FB4;
+    color: #F2F2F2;
+    border-radius: 5px;
+    border: none;
+}
+
+.create-public:hover {
+    background-color: #084B8A;
+    cursor: pointer;
+}

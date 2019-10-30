@@ -3,10 +3,11 @@ import './style.css'
 import Postings from './pages/Postings/index'
 import Search from './pages/Search/index'
 import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
+import CreatePost from './pages/CreatePost'
 
 export default class Main extends Component {
     state = {
-        userId: 7,
+        userId: '',
     }
 
     render() {
@@ -22,12 +23,13 @@ export default class Main extends Component {
                         <Link className='searchStart' to={`/posts/userId/${userId}`}>Pesquisar</Link>
                         <hr />
                         <h2>Crie uma nova postagem agora, apenas clique no botão abaixo e preencha o formulario</h2>
-                        <button className='createPosting'>Criar nova postagem</button>
+                        <Link className='createPosting' to={`/posts/create`}>Criar nova postagem</Link>
                     </div>
                     
                     <Switch>
                         <Route exact path='/' component={Postings} />
                         <Route exact path='/posts/userId/:userId' render={(props) => <Search {...props} condition={`?userId=${userId}`} />} />
+                        <Route exact path='/posts/create' component={CreatePost} />
                     </Switch>
                 </BrowserRouter>
             </main>
