@@ -2,8 +2,9 @@ import React, {Component} from 'react'
 import './style.css'
 import Postings from './pages/Postings/index'
 import Search from './pages/Search/index'
-import {BrowserRouter, Route, Switch, Link, Redirect} from 'react-router-dom'
+import {BrowserRouter, Route, Switch, Link} from 'react-router-dom'
 import CreatePost from './pages/CreatePost'
+import Post from './pages/Post/index'
 
 export default class Main extends Component {
     state = {
@@ -28,6 +29,7 @@ export default class Main extends Component {
                     <Switch>
                         <Route exact path='/' component={Postings} />
                         <Route exact path='/posts/userId/:userId' component={Search} />
+                        <Route exact path='/post/:postId' component={Post} />
                         <Route exact path='/posts/create' component={CreatePost} />
                     </Switch>
                 </BrowserRouter>
