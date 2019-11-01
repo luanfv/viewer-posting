@@ -5,6 +5,10 @@ import imgDelete from '../../../../img/delete.png'
 import {Link} from 'react-router-dom'
 
 export default class Postings extends Component {
+    constructor(props) {
+        super(props)
+    }
+    
     state = {
         postings: [],
     }
@@ -13,8 +17,13 @@ export default class Postings extends Component {
        this.loadPostings() 
     }
 
+    componentDidUpdate() {
+        this.loadPostings()
+    }
+
     loadPostings = async () => {
-        const response = await api.get(`/posts`)
+        const url = this.props.match.params.userId ? `/posts?userId=${this.props.match.params.userId}` : `/posts`
+        const response = await api.get(url)
         this.setState({postings: response.data})
     }
 
