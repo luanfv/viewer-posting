@@ -2,16 +2,6 @@
     margin-bottom: 40px;
 }
 
-.delete {
-    width: 40px;
-    height: 40px;
-    float: right;
-}
-
-.delete:hover {
-    cursor: pointer;
-}
-
 .title {
     color: black;
     font-size: 1.6em;

@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './style.css'
+import imgDelete from '../../../../img/delete.png'
 import api from '../../../../service/api'
 
 export default class Post extends Component {
@@ -31,6 +32,11 @@ export default class Post extends Component {
         const response = await api.get(`/posts/${id}`)
         this.setState({post: response.data})
     }
+    
+    deletePost = (post) => {
+        api.delete(`/posts/${post.id}`)
+        alert(`Post foi deletado (simulação) - Post ID: ${post.id} / User ID: ${post.userId}`)
+    }
 
     render() {
         const {post, comments} = this.state
@@ -39,6 +45,7 @@ export default class Post extends Component {
             <div className='content'>
                 
                 <div className='post'>
+                    <img className='delete' onClick={() => this.deletePost(post)} src={imgDelete} />
                     <h2 className='userId'>User ID: {post.userId}</h2>
                     <h1 className='title'>{post.title}</h1>
                     <p className='body'>{post.body}</p>
