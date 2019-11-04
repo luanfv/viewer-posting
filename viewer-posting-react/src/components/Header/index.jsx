@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import './style.css'
+import {Link} from 'react-router-dom'
 
 export default class Header extends Component {
     render() {
         return (
             <header id='header'>
-                <h1 className='title-header'>Viewer Posting</h1>
+                <Link className='title-header' to='/'>Viewer Posting</Link>
             </header>
         )
     }
