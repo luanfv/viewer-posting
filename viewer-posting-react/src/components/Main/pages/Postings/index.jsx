@@ -36,10 +36,10 @@ export default class Postings extends Component {
         const {postings} = this.state
 
         return (
-            <div className='postings'>
+            <div>
                 {
                     postings.map(post => 
-                        <div key={post.id} className='post'>
+                        <div key={post.id} className='content'>
                             <img className='delete' onClick={() => this.deletePost(post)} src={imgDelete} />
                             <h3 className='userId'>ID de usuário: {post.userId}</h3>
                             <Link className='title' to={`/post/${post.id}`}>{post.title}</Link>

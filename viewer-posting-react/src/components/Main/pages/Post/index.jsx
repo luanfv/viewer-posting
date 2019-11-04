@@ -36,12 +36,12 @@ export default class Post extends Component {
         const {post, comments} = this.state
 
         return (
-            <div>
+            <div className='content'>
                 
                 <div>
-                    <h2>{post.userId}</h2>
-                    <h1>{post.title}</h1>
-                    <p>{post.body}</p>
+                    <h2 className='userId'>{post.userId}</h2>
+                    <h1 className='title'>{post.title}</h1>
+                    <p className='body'>{post.body}</p>
                 </div> 
                 <hr />
                 <div>

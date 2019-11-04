@@ -4,7 +4,7 @@ import './style.css'
 export default class CreatePost extends Component {
     render() {
         return(
-            <div id='create-main'>
+            <div className='content'>
 
                 <h1>
                     Preencha os campos abaixo e simule a criação de uma nova postagem
