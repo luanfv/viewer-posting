@@ -38,20 +38,21 @@ export default class Post extends Component {
         return (
             <div className='content'>
                 
-                <div>
-                    <h2 className='userId'>{post.userId}</h2>
+                <div className='post'>
+                    <h2 className='userId'>User ID: {post.userId}</h2>
                     <h1 className='title'>{post.title}</h1>
                     <p className='body'>{post.body}</p>
                 </div> 
                 <hr />
                 <div>
+                    <h2 className='comment-title'>Comentários</h2>
                     {
                         comments.map(element => 
-                            <div key={element.id}>
-                                <p>E-mail: {element.email}</p>
-                                <p>nome: {element.name}</p>
+                            <div className='comment' key={element.id}>
+                                <p className='email'>{element.email}</p>
+                                <p className='name'>{element.name}</p>
                                 
-                                <p>{element.body}</p>
+                                <p className='body'>{element.body}</p>
                             </div>
                         )
                     }
