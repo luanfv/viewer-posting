@@ -45,6 +45,7 @@ export default class Postings extends Component {
                             <Link className='title' to={`/post/${post.id}`}>{post.title}</Link>
                             <hr />
                             <p className='body'>{post.body}</p>
+                            <Link className='view' to={`/post/${post.id}`}>Visualizar</Link>
                         </div>
                     )
                 }

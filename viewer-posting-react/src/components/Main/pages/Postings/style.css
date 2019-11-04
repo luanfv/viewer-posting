@@ -25,3 +25,20 @@
     padding-top: 10px;
     padding-bottom: 30px;
 }
+
+.view {
+    border: solid 2px #424242;
+    border-radius: 5px;
+    color: #424242;
+    font-weight: 800;
+    height: 40px;
+    display: flex;    
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.view:hover {
+    background-color: #424242;
+    color: #F2F2F2;
+}
